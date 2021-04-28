@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<header class="masthead" style="background-image: url('assets/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1>Smart Blog</h1>
+                    <span class="subheading">A Blog by Computer Engineering 4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <!-- <div class="post-preview" (click)="Openpost()">
+                <a>
+                    <h2 class="post-title">Man must explore, and this is exploration at its greatest</h2>
+                    <h3 class="post-subtitle">Problems look mighty small from 150 miles up</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a>Start Bootstrap</a> on September 24, 2021
+                </p>
+            </div>
+            <hr /> -->
+            <div class="post-preview" (click)="Openpost(post)" *ngFor='let post of allpost.data;'>
+                <a>
+                    <h2 class="post-title">{{post.title}}</h2>
+                    <h3 class="post-subtitle">{{post.body | truncate: 150 }}</h3>
+
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a>BIntu</a> on September 18, 2021
+                </p>
+            </div>
+            <hr />
+            <!-- Pager-->
+            <div class="clearfix"><a class="btn btn-primary float-right" href="#!">Older Posts →</a></div>
+        </div>
+    </div>
+</div>
+<hr />
+<app-footer></app-footer>
